@@ -101,7 +101,7 @@ const app = express();
 app.use(compression());
 app.use(responseTime());
 
-const server_port = process.env.SILLY_TAVERN_PORT || getConfigValue('port', 8000);
+const server_port = process.env.PORT || getConfigValue('port', 8000);
 
 const autorun = (getConfigValue('autorun', false) || cliArguments.autorun) && !cliArguments.ssl;
 const listen = getConfigValue('listen', false);
